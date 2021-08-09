@@ -90,6 +90,7 @@ public class Main {
 
     public static String[] sortList(String[] list) {
         String temp = "";
+        
         for (int i = 0; i < list.length; i++) {
             for (int j = i + 1; j < list.length; j++) {
                 int result = list[i].compareTo(list[j]);
@@ -105,11 +106,13 @@ public class Main {
 
     public static String[] editList(String[] list) {
         Scanner input = new Scanner(System.in);
+        
         System.out.print("input index product want to edit:");
         int index = input.nextInt();
         input.nextLine();
         System.out.print("input name product new is: ");
         String newProduct = input.nextLine();
+        
         for (int i = 0; i < list.length; i++) {
             if (i == index) {
                 list[i] = newProduct;
